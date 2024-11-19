@@ -1,0 +1,85 @@
+.container {
+    font-family: 'Pretendard';
+    font-style: normal;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 부모 요소가 뷰포트 전체를 차지하게 설정 */
+  }
+  
+  .left, .right {
+    width: 35vw;
+    height: 100vh;
+  }
+
+
+  /* @media (max-width: 1240px) {
+    .left, .right {
+      width: 25vw;
+      height: 100vh;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .left, .right {
+        width: 35vw;
+        height: 100vh;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .left, .right {
+      width: 25vw;
+      height: 100vh;
+    }
+  } */
+  
+  .text {
+    width: 100%;
+    position: absolute; /* 텍스트를 가운데 배치 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* 텍스트가 이미지 위에 보이도록 설정 */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Big{
+    font-weight: 700;
+    font-size: 86px;
+    color: white;
+    margin-bottom: 14px;
+  }
+  
+  .Small{
+    font-weight: 700;
+    font-size: 56px;
+    color: white;
+    margin-bottom: 55px;
+  }
+
+  .button{
+    background: #D82F45;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    width: 162px;
+    height: 55px;
+    padding: 12px 36px;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+    
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+}
+
