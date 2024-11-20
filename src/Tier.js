@@ -76,7 +76,7 @@ function Tier(){
         <div className={styles.inputflex}>
         <p>소지 중인 5티어 카드 수</p> <input value={tier5} type="text" className={styles.input}
         onChange={(e) => setTier5(e.target.value)}
-        disabled={tierToggled}
+        // disabled={tierToggled}
         ></input>
         </div>
         
