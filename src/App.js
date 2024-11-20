@@ -4,6 +4,7 @@ import Main from './Main';
 import Footer from './Footer';
 import Tier from './Tier';
 import Header from './Header';
+import Mail from './Mail';
 
 function App() {
   const location = useLocation(); // 현재 경로 정보를 가져옴
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" onClick={() => setClickedRoute('/')} element={<Main />} />
         <Route path="/6tier" onClick={() => setClickedRoute('Tier')} element={<Tier />} />
+        <Route path="/Mail" onClick={() => setClickedRoute('Mail')} element={<Mail />} />
       </Routes>
 
       <Footer />

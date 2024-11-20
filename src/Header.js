@@ -15,10 +15,13 @@ function Header(){
                     메인
                 </a>
                 
-                <a href="/6tier" className={styles.active}>
+                <a href="/6tier" className={styles.notactive}>
                     티어
                 </a>
-
+                
+                <a href="/Mail" className={styles.notactive}>
+                    우체통
+                </a>
 
           
             </div>

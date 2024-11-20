@@ -18,30 +18,6 @@
 
 }
 
-.selectbox {
-  box-sizing: border-box;
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 12px;
-  gap: 10px;
-
-  width: 220px;
-  height: 43px;
-
-  background: #3a3a3c;
-  border: 1px solid #7c7c7d;
-  border-radius: 4px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
 .tierselect{
 box-sizing: border-box;
 display: flex;
