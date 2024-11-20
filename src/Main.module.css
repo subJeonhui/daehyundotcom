@@ -1,3 +1,30 @@
+.header{
+  /* NavigationBar */
+position: absolute;
+width: 100%;
+height: 80px;
+left: 0px;
+top: 0px;
+background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
+
+}
+.logo{
+  width: 100px;
+  margin-top : 15px;
+  margin-left: 30px;
+}
+@media (max-width: 768px){
+  .logo{
+    width: 50px;
+  }
+}
+@media (max-width: 480px){
+  .logo{
+    width: 25px;
+  }
+}
+
+
 .container {
     font-family: 'Pretendard';
     font-style: normal;
@@ -9,11 +36,10 @@
   }
   
   .left, .right {
-    width : 35vw; /* 이미지가 화면의 절반을 채우도록 설정 */
+    width : 25vw; /* 이미지가 화면의 절반을 채우도록 설정 */
     height: 100vh; /* 비율 유지 */
   }
 
-  
   .text {
     width: 100%;
     position: absolute; /* 텍스트를 가운데 배치 */
@@ -25,23 +51,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
   }
+
+
 
   .Big{
     font-weight: 700;
     font-size: 86px;
     color: white;
-    margin-bottom: 14px;
   }
   
   .Small{
     font-weight: 700;
     font-size: 56px;
     color: white;
-    margin-bottom: 55px;
   }
 
-  .button{
+  .button {
     background: #D82F45;
     border-radius: 12px;
     color: white;
@@ -50,15 +77,77 @@
     height: 55px;
     padding: 12px 36px;
     gap: 10px;
-    font-size: 20px;
+    font-size: 26px;
     cursor: pointer;
-
-    
-    
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
+  }
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+  .Big {
+    font-size: 72px;
+  }
+
+  .Small {
+    font-size: 48px;
+  }
+
+  .button {
+    width: auto;
+    height: 50px;
+    font-size: 22px;
+  }
 }
 
+/* Small screens (e.g., large mobile devices) */
+@media (max-width: 768px) {
+  .Big {
+    font-size: 56px;
+  }
+
+  .Small {
+    font-size: 36px;
+  }
+
+  .button {
+    width: auto;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+/* Extra small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .Big {
+    font-size: 47px;
+  }
+
+  .Small {
+    font-size: 24px;
+  }
+
+  .button {
+    width: auto;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Very small screens (e.g., small mobile devices) */
+@media (max-width: 350px) {
+  .Big {
+    font-size: 30px;
+  }
+
+  .Small {
+    font-size: 14px;
+  }
+
+  .button {
+    width: auto;
+    height: 35px;
+    font-size: 16px;
+  }
+}
