@@ -68,6 +68,13 @@ background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
     color: white;
   }
 
+  .Small2 {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(205, 128, 128);
+  }
+
+
   .button {
     background: #D82F45;
     border-radius: 12px;

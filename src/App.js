@@ -19,13 +19,11 @@ function App() {
   return (
     <>
       {showHeader && <Header />} {/* /main 경로에서는 Header를 렌더링하지 않음 */}
-      
+
       <Routes>
         <Route path="/" onClick={() => setClickedRoute('/')} element={<Main />} />
         <Route path="/6tier" onClick={() => setClickedRoute('Tier')} element={<Tier />} />
       </Routes>
-
-
 
       <Footer />
     </>
