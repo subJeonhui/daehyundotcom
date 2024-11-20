@@ -7,7 +7,9 @@ function Header(){
     return (
         <div className={styles.menu}>
             <div className={styles.header}>
+            <a href="/" className={styles.notactive}>
                 <img className={styles.logo} src="./image/logo.png" alt="LOGO"/>
+                </a>
             </div>
             
             <div className={styles.menubar}>
