@@ -4,9 +4,7 @@ function Footer() {
   return (
     <div className={styles.foot}>
         <div>
-            <p>대현닷컴</p>
-            <p>© 2024</p>
-
+            <p>대현닷컴<br/>© 2021</p>
             <p>쓰리이디엇츠 · 대표 강대현</p>
             <p>사업자 등록번호 868-18-02199</p>
             <p>contact@collecti.me · 010-7712-2413</p>
