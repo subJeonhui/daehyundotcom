@@ -82,7 +82,7 @@ background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
     border: none;
     width: 162px;
     height: 55px;
-    padding: 12px 36px;
+    /* padding: 12px 36px; */
     gap: 10px;
     font-size: 26px;
     cursor: pointer;
