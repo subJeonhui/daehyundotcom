@@ -12,15 +12,19 @@ function Header(){
             
             <div className={styles.menubar}>
             <a href="/" className={styles.notactive}>
-                    메인
+                    메인화면
                 </a>
                 
                 <a href="/6tier" className={styles.notactive}>
-                    티어
+                    티어 계사기
                 </a>
                 
                 <a href="/Mail" className={styles.notactive}>
-                    우체통
+                    우체통 계산기
+                </a>
+
+                <a href="/Exchange" className={styles.notactive}>
+                    환율 계산기
                 </a>
 
           

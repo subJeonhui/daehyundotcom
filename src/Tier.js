@@ -92,14 +92,14 @@ function Tier(){
             }}
             /> 
         </div>
-            
+        
         <div className={styles.inputflex}>
         <button className={styles.button}
         onClick={() => {
             onClick();
         }}
         >계산하기</button>
-        <button className={styles.button}
+        <button className={styles.resetbutton}
         onClick={() => {
             onReset();
         }}
