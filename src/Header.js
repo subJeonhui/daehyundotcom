@@ -13,10 +13,9 @@ function Header(){
             </div>
             
             <div className={styles.menubar}>
-            <a href="/유저게시판" className={styles.notactive}>
-                유저게시판
-                </a>
-                
+                <a href="/상자깡" className={styles.notactive}>
+                    상자깡 확률
+                </a>                
                 <a href="/티어" className={styles.notactive}>
                     티어 계산기
                 </a>
@@ -31,6 +30,9 @@ function Header(){
 
                 <a href="/권엽" className={styles.notactive}>
                     권엽 계산기
+                </a>
+                <a href="/유저게시판" className={styles.notactive}>
+                유저게시판
                 </a>
 
           
