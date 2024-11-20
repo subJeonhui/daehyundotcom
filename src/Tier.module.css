@@ -1,5 +1,5 @@
 .container{
-  padding : 5vw;
+  margin : 5vw;
   width: 90vw;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   
@@ -105,11 +105,10 @@ flex-grow: 0;
   flex-direction: row; /* 가로 정렬 */
   justify-content: flex-start; /* 왼쪽 정렬 */
   align-items: stretch; /* 내부 요소들이 세로로 늘어나도록 */
-
-  padding: 32px;
   gap: 32px;
-
-  width: 100%; /* 가로 100% */
+  padding-top: 20px;
+  padding-left : 20px;
+  width: 90% ; /* 가로 100% */
   min-height: 206px; /* 최소 높이를 설정하여 높이가 깨지지 않도록 */
   
   background: #3A3A3C;

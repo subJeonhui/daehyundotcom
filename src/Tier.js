@@ -93,20 +93,23 @@ function Tier(){
         >초기화</button>
         </div>
 
-        <div className={styles.resultarea}>
-            <div>
-                <p>필요 3티어 카드 수</p>
-                <p>3티어 → 4티어 강화비용</p>
-                <p>5티어까지 총 강화비용</p>
-                <p>6티어까지 총 강화비용</p>
-            </div>
-            <div>
-                <p>{Number(120) - Number(tier3) - Number(tier4) * 4 - Number(tier5) * 20} 개</p>
-                <p>{threeup/10000}만 루블</p>
-                <p>{fourup/10000}만 루블</p>
-                <p>{Number(threeup) + Number(fourup) + Number(1000000)}루블</p>
-            </div>
+        <div className={styles.result}>
         </div>
+
+            <div className={styles.resultarea}>
+                <div>
+                    <p>필요 3티어 카드 수</p>
+                    <p>3티어 → 4티어 강화비용</p>
+                    <p>5티어까지 총 강화비용</p>
+                    <p>6티어까지 총 강화비용</p>
+                </div>
+                <div>
+                    <p>{Number(120) - Number(tier3) - Number(tier4) * 4 - Number(tier5) * 20} 개</p>
+                    <p>{threeup/10000}만 루블</p>
+                    <p>{fourup/10000}만 루블</p>
+                    <p>{(Number(threeup) + Number(fourup) + Number(1000000)) /10000}만 루블</p>
+                </div>
+            </div>
 
 
         </div>
