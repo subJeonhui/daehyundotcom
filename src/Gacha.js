@@ -32,11 +32,7 @@ function Gacha() {
             console.error("데이터를 불러오는 데 실패했습니다:", error);
         }
     };
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 4c142fe27084ed71150122856825210e9b7f9ff3
     // selectedGrade 변경 시 해당 데이터를 가져오는 effect
     useEffect(() => {
         fetchData(selectedGrade); // selectedGrade가 바뀔 때마다 데이터 다시 불러오기
