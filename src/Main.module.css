@@ -24,7 +24,6 @@ background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
   }
 }
 
-
 .container {
     font-family: 'Pretendard';
     font-style: normal;
@@ -53,8 +52,6 @@ background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
     justify-content: center;
     gap: 20px;
   }
-
-
 
   .Big{
     font-weight: 700;
