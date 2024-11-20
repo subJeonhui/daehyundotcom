@@ -18,7 +18,7 @@
 
 }
 
-.selectbox {
+select {
   box-sizing: border-box;
 
   /* Auto layout */
@@ -31,7 +31,7 @@
 
   width: 220px;
   height: 43px;
-
+  color: #EAEAEA;
   background: #3a3a3c;
   border: 1px solid #7c7c7d;
   border-radius: 4px;
@@ -67,6 +67,31 @@ margin-bottom: 20px;
 
 }
 
+
+.checkbox{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 10px;
+
+  width: 220px;
+  height: 43px;
+
+  background: #3A3A3C;
+  border: 1px solid #7C7C7D;
+  border-radius: 4px;
+  color: #EAEAEA;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin-bottom: 20px;
+}
+
 input{
 
 width: 150px;
@@ -96,7 +121,6 @@ flex-grow: 0;
   justify-content: left;
   align-items: center;
   gap: 10px;
-
 }
 
 .button {

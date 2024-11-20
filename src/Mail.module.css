@@ -72,7 +72,7 @@ flex-grow: 0;
   justify-content: left;
   align-items: center;
   gap: 10px;
-
+  margin-bottom: 10px;
 }
 
 .button {

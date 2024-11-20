@@ -12,6 +12,12 @@ function Mail() {
         setRuble(50 * (Number(price2) - Number(price)) * (Number(price) + Number(price2) - 74));
     }
 
+    const onReset = () => {
+        setPrice(42);
+        setPrice2(1002);
+        setRuble(0);
+    }
+
     const options = [];
     for (let i = 42; i <= 4242; i += 10) {
       options.push(i);
@@ -46,12 +52,20 @@ function Mail() {
             ))}
           </select>
         </div>
-
+            
+        <div className={styles.inputflex}>
         <button className={styles.button}
         onClick={() => {
             onClick();
         }}
         >계산하기</button>
+
+      <button className={styles.button}
+        onClick={() => {
+            onReset();
+        }}
+        >초기화</button>
+      </div>
 
             <div className={styles.result}>
             </div>
