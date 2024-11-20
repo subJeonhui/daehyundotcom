@@ -109,7 +109,7 @@ flex-grow: 0;
   padding: 32px;
   gap: 32px;
 
-  width: 50%; /* 가로 100% */
+  width: 100%; /* 가로 100% */
   min-height: 206px; /* 최소 높이를 설정하여 높이가 깨지지 않도록 */
   
   background: #3A3A3C;
