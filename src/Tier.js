@@ -81,7 +81,6 @@ function Tier(){
         ></input>
         </div>
         <div className={styles.inputflex}>
-            <p>10% 할인 테두리 적용</p>
             <input
             type="checkbox"
             value={sale}
@@ -90,7 +89,7 @@ function Tier(){
                 setSale((current) => !current);
                 console.log('Checkbox clicked!');
             }}
-            /> 
+            /> 10% 할인 테두리 적용
         </div>
         
         <div className={styles.inputflex}>

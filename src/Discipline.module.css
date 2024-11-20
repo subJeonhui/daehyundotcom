@@ -77,8 +77,8 @@ margin-bottom: 20px;
   padding: 8px 12px;
   gap: 10px;
 
-  width: 25px;
-  height: 25px;
+  width: 220px;
+  height: 43px;
 
   background: #3A3A3C;
   border: 1px solid #7C7C7D;
@@ -91,10 +91,6 @@ margin-bottom: 20px;
 
   margin-bottom: 20px;
 }
-.checkbox:checked {
-    background-color: red;
-}
-
 
 input{
 

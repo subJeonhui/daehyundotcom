@@ -14,8 +14,8 @@ function Main() {
       <div className={styles.text}>
         <div className={styles.Big}>대현닷컴</div>
         <div className={styles.Small}>마피아42를 쉽고 간단하게</div>
-
-        <Link to="/6tier">
+        
+        <Link to="/게시판">
         <button className={styles.button}>시작하기</button>
         </Link>
         <div className={styles.Small2}>대현닷컴 기능들을 하나씩 업데이트 해볼께요</div>
