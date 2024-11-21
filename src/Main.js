@@ -18,7 +18,7 @@ function Main() {
         <Link to="/상자깡">
         <button className={styles.button}>시작하기</button>
         </Link>
-        <div className={styles.Small2}>대현닷컴 기능들을 하나씩 업데이트 해볼께요</div>
+        
       </div>
       <img className={styles.right} src="./image/RIGHT.png" alt="Right"/>
     </div>
