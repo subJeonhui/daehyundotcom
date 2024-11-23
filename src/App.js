@@ -10,6 +10,7 @@ import Discipline from './Discipline';
 import Board from './Board';
 import BoardDetail from './BoardDetail';
 import Gacha from "./Gacha";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const location = useLocation(); // 현재 경로 정보를 가져옴
@@ -36,8 +37,9 @@ function App() {
         <Route path="/권엽" onClick={() => setClickedRoute('권엽')} element={<Discipline />} />
         <Route path="/상자깡" onClick={() => setClickedRoute('상자깡')} element={<Gacha />} />
       </Routes>
-
       <Footer />
+      <Analytics />
+      <></>
     </>
   );
 }
