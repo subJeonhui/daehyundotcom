@@ -58,6 +58,14 @@ function Header({ setSelectedMenu }) {
                 >
                     권엽 계산기
                 </Link>
+                
+                <Link
+                    to="/출석보상"
+                    className={selected === '출석보상' ? styles.active : styles.notactive}
+                    onClick={() => handleMenuClick('출석보상')}
+                >
+                    출석보상 계산기
+                </Link>
 
                 <Link
                     to="/유저게시판"
@@ -65,14 +73,6 @@ function Header({ setSelectedMenu }) {
                     onClick={() => handleMenuClick('유저게시판')}
                 >
                     유저게시판
-                </Link>
-
-                <Link
-                    to="/출석보상"
-                    className={selected === '출석보상' ? styles.active : styles.notactive}
-                    onClick={() => handleMenuClick('출석보상')}
-                >
-                    출석보상 계산기
                 </Link>
 
                 <Link
