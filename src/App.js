@@ -10,6 +10,7 @@ import Discipline from './Discipline';
 import Board from './Board';
 import BoardDetail from './BoardDetail';
 import Gacha from "./Gacha";
+import DailyReward from "./DailyReward";
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -29,13 +30,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/유저게시판" onClick={() => setClickedRoute('유저게시판')} element={<Board />} />
-        <Route path="/유저게시판/:id" element={<BoardDetail />} />
         <Route path="/티어" onClick={() => setClickedRoute('티어')} element={<Tier />} />
         <Route path="/우체통" onClick={() => setClickedRoute('우체통')} element={<Mail />} />
         <Route path="/환율" onClick={() => setClickedRoute('환율')} element={<Exchange />} />
         <Route path="/권엽" onClick={() => setClickedRoute('권엽')} element={<Discipline />} />
         <Route path="/상자깡" onClick={() => setClickedRoute('상자깡')} element={<Gacha />} />
+        <Route path="/출보" onClick={() => setClickedRoute('출보')} element={<DailyReward />} />
+        <Route path="/유저게시판" onClick={() => setClickedRoute('유저게시판')} element={<Board />} />
+        <Route path="/유저게시판/:id" element={<BoardDetail />} />
       </Routes>
       <Footer />
       <Analytics />

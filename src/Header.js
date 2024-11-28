@@ -34,6 +34,10 @@ function Header(){
                 <a href="/유저게시판" className={styles.notactive}>
                 유저게시판
                 </a>
+
+                <a href="/출보" className={styles.notactive}>
+                출석보상 계산기
+                </a>
                 
                 <a href="/rice" className={styles.notactive}>
                 추석이벤트 연습 사이트
