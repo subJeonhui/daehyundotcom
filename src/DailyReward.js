@@ -33,7 +33,7 @@ function DailyReward() {
 
     return (
         <div className={styles.container}>
-            <p className={styles.title}>출보 계산기</p>
+            <p className={styles.title}>출석보상 계산기</p>
             <div className={styles.inputflex}>
                 <p>명성</p>
                 <input
@@ -110,7 +110,7 @@ function DailyReward() {
 
             <div className={styles.result}></div>
             <div className={styles.resultarea}>
-                <p>출보 루블</p>
+                <p>출석보상 루블</p>
                 <p>
                     {fame
                         ? Math.floor(amount +
@@ -121,7 +121,7 @@ function DailyReward() {
                           )}
                 </p>
 
-                <p>출보 루나</p>
+                <p>출석보상 루나</p>
                 <p>{Math.floor(amount / 4200)}</p>
             </div>
         </div>
