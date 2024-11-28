@@ -20,14 +20,20 @@ function Gacha() {
     const [selectedGrade, setSelectedGrade] = useState("2500");
     const [items, setItems] = useState([]);
     const [totalEquipProbability, setTotalEquipProbability] = useState(0); // equip 확률 합계를 위한 상태 추가
+    const [total, setTotal] = useState(0); // 전체확률검증을 위한 상태 추가
     const [checkedItems, setCheckedItems] = useState(new Set()); // 선택된 아이템을 추적하는 상태 추가
-
+    
     // grade에 따라 데이터를 가져오는 함수
     const fetchData = async (grade) => {
         try {
-            const response = await fetch(`/확률/${grade}.json`);
+            const response = await fetch(`/확률/2024눈싸움/${grade}.json`);
             const data = await response.json();
             setItems(data.items || []);  // items 데이터를 상태로 저장
+            // itemd의 확률을 합산
+            const sum = data.items.reduce((sum, item) => {
+                return sum + item.chance;
+            }, 0);
+            setTotal(sum);
         } catch (error) {
             console.error("데이터를 불러오는 데 실패했습니다:", error);
         }
@@ -100,6 +106,7 @@ function Gacha() {
             </select>
 
             <h2>장착템 확률 합계: {totalEquipProbability.toFixed(4)}%</h2>
+            <h3>전체확률 : {total}</h3>
             <div className={styles.gachaContainer}>
                 <table className={styles.gacha}>
                     <thead>
