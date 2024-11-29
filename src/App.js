@@ -31,7 +31,7 @@ function App() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-WR970GKCD2');
+      gtag('config', 'G-5VFJNJPHTE');
     `;
     document.body.appendChild(inlineScript);
 
