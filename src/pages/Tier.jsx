@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Tier.module.css';
+import styles from './styles/Tier.module.css';
 import { useState } from 'react';
 
 

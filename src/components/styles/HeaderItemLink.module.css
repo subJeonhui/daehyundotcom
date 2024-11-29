@@ -1,0 +1,18 @@
+.active {
+    color: white;
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: solid 3px white;
+}
+
+.inactive {
+    color: white;
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}

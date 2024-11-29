@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Exchange.module.css";
+import styles from "./styles/Exchange.module.css";
 
 function Exchange() {
     const [amount, setAmount] = React.useState(0);

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Mail.module.css";
+import styles from "./styles/Mail.module.css";
 
 
 function Mail() {

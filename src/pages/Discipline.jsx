@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Discipline.module.css";
+import styles from "./styles/Discipline.module.css";
 
 function Discipline() {
     const [amount, setAmount] = React.useState(0);
