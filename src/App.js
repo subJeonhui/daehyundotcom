@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 import Main from './Main';
 import Footer from './Footer';
 import Tier from './Tier';
@@ -13,6 +14,8 @@ import Gacha from "./Gacha";
 import DailyReward from "./DailyReward";
 import { Analytics } from '@vercel/analytics/react';
 
+const TRACKING_ID = "G-5VFJNJPHTE"; // Google Analytics Tracking ID
+
 function App() {
   const location = useLocation(); // 현재 경로 정보를 가져옴
   const [selectedMenu, setSelectedMenu] = useState(null); // 선택된 메뉴 상태
@@ -21,26 +24,11 @@ function App() {
 
   useEffect(() => {
     // Google Analytics 초기화
-    const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-WR970GKCD2";
-    script.async = true;
-    document.body.appendChild(script);
+    ReactGA.initialize(TRACKING_ID);
 
-    const inlineScript = document.createElement('script');
-    inlineScript.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5VFJNJPHTE');
-    `;
-    document.body.appendChild(inlineScript);
-
-    // Cleanup: 컴포넌트가 언마운트될 때 스크립트 제거
-    return () => {
-      document.body.removeChild(script);
-      document.body.removeChild(inlineScript);
-    };
-  }, []);
+    // 페이지 변경 시마다 Google Analytics에 페이지 뷰를 기록
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
 
   return (
     <>
@@ -62,3 +50,5 @@ function App() {
     </>
   );
 }
+
+export default App;
