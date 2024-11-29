@@ -10,7 +10,6 @@ function Header() {
     return (
         
         <div className={styles.menu}>
-            {path}
             <div className={styles.header}>
                 <Link to="/" className={styles.notactive}>
                     <img className={styles.logo} src="./image/logo.png" alt="LOGO" />
@@ -79,7 +78,7 @@ function Header() {
                 >
                     추석이벤트 연습 사이트
                 </Link> */}
-                
+
             </div>
         </div>
     );
