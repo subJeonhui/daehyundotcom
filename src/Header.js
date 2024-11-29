@@ -75,11 +75,11 @@ function Header({ setSelectedMenu }) {
                     유저게시판
                 </Link>
                 
-                <a href='rice'  className={selected === 'rice' ? styles.active : styles.notactive}
+                {/* <a href='rice'  className={selected === 'rice' ? styles.active : styles.notactive}
                 onClick={() => handleMenuClick('rice')}
                 >
                     추석이벤트 연습 사이트
-                </a>
+                </a> */}
 
                 {/* <Link
                     to="/rice"
