@@ -29,7 +29,7 @@ select {
   padding: 8px 12px;
   gap: 10px;
 
-  width: 220px;
+  width: auto;
   height: 43px;
   color: #EAEAEA;
   background: #3a3a3c;
