@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Gacha.module.css";
+import styles from "./styles/Gacha.module.css";
 
 // 쿠키에서 값을 읽는 함수
 const getCookie = (name) => {

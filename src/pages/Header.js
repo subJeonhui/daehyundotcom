@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './styles/Header.module.css';
 
 function Header({ setSelectedMenu }) {
     const [selected, setSelected] = useState(null); // 메뉴 선택 상태

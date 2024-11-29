@@ -1,16 +1,16 @@
 import { Route, Routes, useLocation, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Main from './Main';
-import Footer from './Footer';
-import Tier from './Tier';
-import Header from './Header';
-import Mail from './Mail';
-import Exchange from './Exchange';
-import Discipline from './Discipline';
-import Board from './Board';
-import BoardDetail from './BoardDetail';
-import Gacha from "./Gacha";
-import DailyReward from "./DailyReward";
+import Main from '../pages/Main';
+import Footer from '../pages/Footer';
+import Tier from '../pages/Tier';
+import Header from '../pages/Header';
+import Mail from '../pages/Mail';
+import Exchange from '../pages/Exchange';
+import Discipline from '../pages/Discipline';
+import Board from '../pages/Board';
+import BoardDetail from '../pages/BoardDetail';
+import Gacha from "../pages/Gacha";
+import DailyReward from "../pages/DailyReward";
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
