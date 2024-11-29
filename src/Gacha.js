@@ -17,7 +17,7 @@ const setCookie = (name, value, days) => {
 };
 
 function Gacha() {
-    const [selectedGrade, setSelectedGrade] = useState("2500");
+    const [selectedGrade, setSelectedGrade] = useState("2500R");
     const [items, setItems] = useState([]);
     const [totalEquipProbability, setTotalEquipProbability] = useState(0); // equip 확률 합계를 위한 상태 추가
     const [total, setTotal] = useState(0); // 전체확률검증을 위한 상태 추가

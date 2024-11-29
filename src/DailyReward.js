@@ -90,22 +90,26 @@ function DailyReward() {
                     </div>
                 </div>
                 <div className={styles.inputflex}>
-                                        {/* Guild Image */}
-                                        <img
+                        <div style={{ display: guildLevel === 0 ? "none" : "block" }}>
+                        {/* Guild Image */}
+                        <p>길드 등급</p>
+                        <img
                         src={`../image/Guild/${guildLevel}.png`}
                         alt="Guild Level"
                         width={100}
                         className={styles.image}
-                        style={{ display: guildLevel === 0 ? "none" : "block" }}
-                    />
+                        />
+                        </div>
+                    <div style={{ display: buffLevel === 0 ? "none" : "block" }}>
                    {/* Buff Image */}
+                   <p>동상 버프 레벨</p>
                    <img
                        src={`../image/statue/${buffLevel}.png`}
                        alt="Statue Buff"
                        width={100}
                        className={styles.image}
-                       style={{ display: buffLevel === 0 ? "none" : "block" }}
                    />
+                   </div>
                 </div>
 
             <div className={styles.result}>
