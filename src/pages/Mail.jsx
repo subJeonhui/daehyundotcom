@@ -58,8 +58,7 @@ const calculatePrice = () => {
 
   // onClick 이벤트 핸들러
   const onClick = () => {
-    setPrice2((curret)=>curret-hermes*10);
-    const calculatedRuble = 50 * (Number(price2) - Number(price)) * (Number(price) + Number(price2) - 74); // 루블 계산    
+    const calculatedRuble = 50 * (Number(price2)-hermes*10 - Number(price)) * (Number(price) + Number(price2)-hermes*10 - 74); // 루블 계산    
     setRuble(calculatedRuble); // 루블 업데이트
   };
 
