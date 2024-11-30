@@ -18,7 +18,7 @@ function Discipline() {
             
             <div className={styles.result}></div>
             <div className={styles.resultarea}>
-                <p>권엽 참감 명성</p>
+                <p>권엽 차감 명성</p>
                 <p>{Math.round(20 + 1.5 * Math.sqrt(amount))}</p>
                 
             </div>
