@@ -210,12 +210,12 @@ select {
 
 .gacha thead th:nth-child(2), .gacha thead tr td:nth-child(2) 
 .gacha tbody td:nth-child(2) {
-  width: 65%; /* 아이템 열 */
+  width: 10%; /* 아이템 열 */
 }
 
 .gacha thead th:nth-child(3),
 .gacha tbody td:nth-child(3) {
-  width: 20%; /* 확률 열 */
+  width: 30%; /* 확률 열 */
 }
 
 .gacha td input[type="checkbox"] {

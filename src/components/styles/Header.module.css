@@ -5,9 +5,9 @@
   }
   
   .logo{
-    width: 100px;
-    margin-top : 15px;
-    margin-left: 30px;
+    /* position: absolute; */
+    width: 40px;
+    height: 40px;
   }
 
   @media (max-width: 768px){
@@ -23,16 +23,10 @@
 
 
 .menu{
-    display: flex;
-  flex-direction: column;
-    width: 100%;
-    height: 132px;
-    background: #85282C;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
+  /* display: flex; */
+  padding: 0px;
+  width: 100%;
+  background: #85282C;
 }
 
 .menubar {
@@ -44,6 +38,11 @@
   overflow-x: auto;
   white-space: nowrap;
   gap: 20px; /* Add space between the a tags (adjust the value as needed) */
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
 .menubar::-webkit-scrollbar {

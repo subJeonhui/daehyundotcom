@@ -17,7 +17,7 @@ const setCookie = (name, value, days) => {
 };
 
 function Gacha() {
-    const [selectedGrade, setSelectedGrade] = useState("2500R");
+    const [selectedGrade, setSelectedGrade] = useState("no");
     const [items, setItems] = useState([]);
     const [totalEquipProbability, setTotalEquipProbability] = useState(0); // equip 확률 합계를 위한 상태 추가
     const [total, setTotal] = useState(0); // 전체확률검증을 위한 상태 추가
@@ -99,6 +99,7 @@ function Gacha() {
                 value={selectedGrade}
                 onChange={handleGradeChange}
             >
+                <option value="no">선택해주세요</option>
                 <option value="2500R">2500루블</option>
                 <option value="150">150루나</option>
                 <option value="750">750루나</option>
@@ -112,6 +113,7 @@ function Gacha() {
                     <thead>
                         <tr>
                             <th>선택</th>
+                            <th>이미지</th>
                             <th>아이템</th>
                             <th>확률</th>
                         </tr>
@@ -130,7 +132,12 @@ function Gacha() {
                                         />
                                     )}
                                 </td>
-                                <td>{item.name}</td>
+                                <td>
+                                    <img width={50} src={'image/Items/' + item.name + '.webp'} alt={item.name} />
+                                </td>
+                                <td>
+                                    {item.name}
+                                </td>
                                 <td>{item.chance}%</td>
                             </tr>
                         ))}
