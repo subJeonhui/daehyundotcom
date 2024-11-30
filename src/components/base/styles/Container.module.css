@@ -1,0 +1,13 @@
+.Container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.DirectionRow {
+    flex-direction: row;
+}
+
+.DirectionColumn {
+flex-direction: column;
+}
