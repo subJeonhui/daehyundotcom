@@ -14,9 +14,13 @@ function Mail() {
   const [price, setPrice] = React.useState(42); // 현재 루나
   const [price2, setPrice2] = React.useState(1002); // 목표 루나
   const [ruble, setRuble] = React.useState(0); // 루블
+  const [hermes, setHermes] = React.useState(0); // 보유 헤르메스
   const [nowExchange, setNowExchange] = React.useState(1100); // 환율
   const [totalCost, setTotalPrice] = React.useState(0); // 총 가격
   const [packageCounts, setPackageCounts] = React.useState([]); // 패키지 갯수
+
+
+
 
 // 가격 계산 함수
 const calculatePrice = () => {
@@ -54,7 +58,8 @@ const calculatePrice = () => {
 
   // onClick 이벤트 핸들러
   const onClick = () => {
-    const calculatedRuble = 50 * (Number(price2) - Number(price)) * (Number(price) + Number(price2) - 74); // 루블 계산
+    setPrice2((curret)=>curret-hermes*10);
+    const calculatedRuble = 50 * (Number(price2) - Number(price)) * (Number(price) + Number(price2) - 74); // 루블 계산    
     setRuble(calculatedRuble); // 루블 업데이트
   };
 
@@ -113,6 +118,16 @@ const calculatePrice = () => {
           ))}
         </select>
       </div>
+      
+      <div className={styles.inputflex}>
+        <p>보유 헤르메스(선택)</p>
+        <input
+          type="text"
+          className={styles.input}
+          value={hermes}
+          onChange={(e) => setHermes(e.target.value)}
+        ></input>
+      </div>
 
       <div className={styles.inputflex}>
         <p>현재환율(선택)</p>
@@ -120,7 +135,7 @@ const calculatePrice = () => {
           type="text"
           className={styles.input}
           value={nowExchange}
-          onChange={(e) => setNowExchange(e.target.value)}
+          onChange={(e) => clickHermes(e.target.value)}
         ></input>
       </div>
 
@@ -158,7 +173,7 @@ const calculatePrice = () => {
               <p>총 {totalCost} 원</p>
             </div>
           </div>
-
+          
           {/* 각 패키지 갯수 출력 */}
           <div className={styles.flex}>
             <div>
