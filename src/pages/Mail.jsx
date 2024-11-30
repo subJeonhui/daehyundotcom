@@ -3,11 +3,11 @@ import styles from "./styles/Mail.module.css";
 
 function Mail() {
   const priceTable = [
-    { luna: 42, price: 999 },
-    { luna: 142, price: 2990 },
-    { luna: 420, price: 7900 },
-    { luna: 1420, price: 24900 },
-    { luna: 4242, price: 69000 },
+    { luna: 42, price: 999, price:1100 },
+    { luna: 142, price: 2990, price:3300 },
+    { luna: 420, price: 7900, price:8500 },
+    { luna: 1420, price: 24900, price:27000 },
+    { luna: 4242, price: 69000, price:75000 },
   ];
 
   // 상태 변수들
@@ -19,40 +19,114 @@ function Mail() {
   const [totalCost, setTotalPrice] = React.useState(0); // 총 가격
   const [packageCounts, setPackageCounts] = React.useState([]); // 패키지 갯수
 
+  // 아이폰으로 들어왔는지 안드로이드로 들어왔는지 구분
+  const userAgent = navigator.userAgent.toLowerCase();
 
-
-
-// 가격 계산 함수
-const calculatePrice = () => {
-  let requiredLuna = Math.floor((ruble * nowExchange / 1000000)*1.35); // 필요한 루나 계산
-
-  // 최소 루나가 42 이상이어야 한다면, 42 미만일 경우 42로 설정
-  if (requiredLuna < 42) {
-    requiredLuna = 42;
+  if (userAgent.includes("iphone") || userAgent.includes("ipad") || userAgent.includes("ipod")) {
+      console.log("iOS 기기입니다.");
+  } else if (userAgent.includes("android")) {
+      console.log("Android 기기입니다.");
+  } else {
+      console.log("기타 디바이스입니다.");
   }
-  
+
+// 간단한 그리디 방식으로 구현된 가격 계산 함수
+const calculatePrice = () => {
+  let requiredLuna = Math.ceil((ruble * nowExchange / 1000000)*1.35); // 필요한 루나 계산 (올림 처리)
   let totalCost = 0;
-  let counts = []; // 패키지별 갯수를 저장할 배열
-
-  // 루나 가격 테이블을 기준으로 최적의 금액을 계산
+  let counts = [];
+  
+  if (userAgent.includes("iphone") || userAgent.includes("ipad") || userAgent.includes("ipod")) {
+    for (let i = priceTable.length - 1; i >= 0; i--) {
+      const { luna, price, price2 } = priceTable[i];
+      const numBundles = Math.floor(requiredLuna / luna); // 현재 패키지로 구매할 수 있는 갯수
+  
+      if (numBundles > 0) {
+        totalCost += numBundles * price2; // 총 가격 계산
+        requiredLuna -= numBundles * luna; // 남은 루나 갱신
+  
+        counts.push({
+          luna,
+          count: numBundles,
+          totalPrice: numBundles * price2,
+        });
+      }
+    }
+  
+    if (requiredLuna > 0) {
+      // 남은 루나가 있으면 최저 패키지 추가
+      const { luna, price } = priceTable[0];
+      totalCost += price;
+      counts.push({
+        luna,
+        count: 1,
+        totalPrice: price,
+      });
+    }
+    
+} else if (userAgent.includes("android")) {
   for (let i = priceTable.length - 1; i >= 0; i--) {
-    const { luna, price } = priceTable[i];
+    const { luna, price, price2 } = priceTable[i];
+    const numBundles = Math.floor(requiredLuna / luna); // 현재 패키지로 구매할 수 있는 갯수
 
-    // 루나 수가 남아있을 때만 구매
-    while (requiredLuna >= luna) {
-      const numBundles = Math.floor(requiredLuna / luna); // 구매해야 하는 패키지 갯수
-      totalCost += numBundles * price;
-      requiredLuna -= numBundles * luna; // 남은 루나 수
+    if (numBundles > 0) {
+      totalCost += numBundles * price; // 총 가격 계산
+      requiredLuna -= numBundles * luna; // 남은 루나 갱신
 
-      // 구매한 패키지 갯수 저장
-      counts.push({ luna, count: numBundles, totalPrice: numBundles * price });
+      counts.push({
+        luna,
+        count: numBundles,
+        totalPrice: numBundles * price,
+      });
     }
   }
 
-  // 패키지 갯수 상태 업데이트
-  setPackageCounts(counts); 
-  setTotalPrice(totalCost); // 총 금액 상태 업데이트
+  if (requiredLuna > 0) {
+    // 남은 루나가 있으면 최저 패키지 추가
+    const { luna, price } = priceTable[0];
+    totalCost += price;
+    counts.push({
+      luna,
+      count: 1,
+      totalPrice: price,
+    });
+  }
+} else {
+  for (let i = priceTable.length - 1; i >= 0; i--) {
+    const { luna, price, price2 } = priceTable[i];
+    const numBundles = Math.floor(requiredLuna / luna); // 현재 패키지로 구매할 수 있는 갯수
+
+    if (numBundles > 0) {
+      totalCost += numBundles * price; // 총 가격 계산
+      requiredLuna -= numBundles * luna; // 남은 루나 갱신
+
+      counts.push({
+        luna,
+        count: numBundles,
+        totalPrice: numBundles * price,
+      });
+    }
+  }
+
+  if (requiredLuna > 0) {
+    // 남은 루나가 있으면 최저 패키지 추가
+    const { luna, price } = priceTable[0];
+    totalCost += price;
+    counts.push({
+      luna,
+      count: 1,
+      totalPrice: price,
+    });
+  }
+}
+
+  
+
+
+  setPackageCounts(counts);
+  setTotalPrice(totalCost);
 };
+
 
 
 
