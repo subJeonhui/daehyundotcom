@@ -24,13 +24,13 @@ function Mail() {
 
 // 가격 계산 함수
 const calculatePrice = () => {
-  let requiredLuna = ruble / nowExchange; // 필요한 루나 계산
+  let requiredLuna = Math.floor((ruble * nowExchange / 1000000)*1.35); // 필요한 루나 계산
 
   // 최소 루나가 42 이상이어야 한다면, 42 미만일 경우 42로 설정
   if (requiredLuna < 42) {
     requiredLuna = 42;
   }
-
+  
   let totalCost = 0;
   let counts = []; // 패키지별 갯수를 저장할 배열
 
