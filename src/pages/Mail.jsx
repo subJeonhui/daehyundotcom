@@ -22,14 +22,6 @@ function Mail() {
   // 아이폰으로 들어왔는지 안드로이드로 들어왔는지 구분
   const userAgent = navigator.userAgent.toLowerCase();
 
-  if (userAgent.includes("iphone") || userAgent.includes("ipad") || userAgent.includes("ipod")) {
-      console.log("iOS 기기입니다.");
-  } else if (userAgent.includes("android")) {
-      console.log("Android 기기입니다.");
-  } else {
-      console.log("기타 디바이스입니다.");
-  }
-
 // 간단한 그리디 방식으로 구현된 가격 계산 함수
 const calculatePrice = () => {
   let requiredLuna = Math.ceil((ruble * nowExchange / 1000000)*1.35); // 필요한 루나 계산 (올림 처리)
@@ -54,8 +46,7 @@ const calculatePrice = () => {
     }
   
     if (requiredLuna > 0) {
-      // 남은 루나가 있으면 최저 패키지 추가
-      const { luna, price, price2 } = priceTable[0];
+      const { luna, price2 } = priceTable[0]; // 최저 패키지 사용
       totalCost += price2;
       counts.push({
         luna,
@@ -64,33 +55,6 @@ const calculatePrice = () => {
       });
     }
     
-} else if (userAgent.includes("android")) {
-  for (let i = priceTable.length - 1; i >= 0; i--) {
-    const { luna, price, price2 } = priceTable[i];
-    const numBundles = Math.floor(requiredLuna / luna); // 현재 패키지로 구매할 수 있는 갯수
-
-    if (numBundles > 0) {
-      totalCost += numBundles * price; // 총 가격 계산
-      requiredLuna -= numBundles * luna; // 남은 루나 갱신
-
-      counts.push({
-        luna,
-        count: numBundles,
-        totalPrice: numBundles * price,
-      });
-    }
-  }
-
-  if (requiredLuna > 0) {
-    // 남은 루나가 있으면 최저 패키지 추가
-    const { luna, price, price2 } = priceTable[i];
-    totalCost += price;
-    counts.push({
-      luna,
-      count: 1,
-      totalPrice: price,
-    });
-  }
 } else {
   for (let i = priceTable.length - 1; i >= 0; i--) {
     const { luna, price, price2 } = priceTable[i];
@@ -109,8 +73,7 @@ const calculatePrice = () => {
   }
 
   if (requiredLuna > 0) {
-    // 남은 루나가 있으면 최저 패키지 추가
-    const { luna, price, price2 } = priceTable[i];
+    const { luna, price } = priceTable[0]; // 최저 패키지 사용
     totalCost += price;
     counts.push({
       luna,
@@ -120,7 +83,6 @@ const calculatePrice = () => {
   }
 }
 
-  
 
 
   setPackageCounts(counts);
@@ -260,6 +222,9 @@ const calculatePrice = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div>
+          <h3>※안드로이드와 아이폰의 루나 가격이 다릅니다※</h3>
         </div>
       </div>
     </div>
