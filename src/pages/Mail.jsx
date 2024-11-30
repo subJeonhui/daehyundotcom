@@ -89,7 +89,7 @@ const calculatePrice = () => {
       <p className={styles.title}>우체통 계산기</p>
 
       <div className={styles.inputflex}>
-        <p>현재 루나</p>
+        <p>현재 우체통</p>
         <select
           onChange={(e) => setPrice(e.target.value)}
           className={styles.selectbox}
@@ -104,7 +104,7 @@ const calculatePrice = () => {
       </div>
 
       <div className={styles.inputflex}>
-        <p>목표 루나</p>
+        <p>목표 우체통</p>
         <select
           onChange={(e) => setPrice2(e.target.value)}
           className={styles.selectbox}
