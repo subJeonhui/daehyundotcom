@@ -21,11 +21,13 @@ function Header() {
 
     return (
         <div className={styles.menu}>
+
             <Container className={styles.header}>
                 <Link to="/">
                     <Logo className={styles.logo}/>
                 </Link>
             </Container>
+            
             <div className={styles.menubar}>
             <Container direction={'row'} gap={20}>
                 {headerItem.map((item, index) => (
@@ -33,7 +35,7 @@ function Header() {
                 ))}
             </Container>
             </div>
-
+            
             {/* <a href='rice'  className={selected === 'rice' ? styles.active : styles.notactive}
                 onClick={() => handleMenuClick('rice')}
                 >

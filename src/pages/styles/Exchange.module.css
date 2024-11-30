@@ -172,9 +172,10 @@ flex-grow: 0;
   align-items: stretch; /* 내부 요소들이 세로로 늘어나도록 */
   gap: 32px;
   padding-top: 20px;
+  padding-bottom: 20px;
   padding-left : 20px;
   width: 90% ; /* 가로 100% */
-  min-height: 206px; /* 최소 높이를 설정하여 높이가 깨지지 않도록 */
+  height: auto; /* 최소 높이를 설정하여 높이가 깨지지 않도록 */
   
   background: #3A3A3C;
   border-radius: 8px;

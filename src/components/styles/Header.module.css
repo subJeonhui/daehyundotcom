@@ -1,11 +1,10 @@
-.header{
+.header {
   flex: 1;
   width: 100%;
   background: linear-gradient(180deg, #242426 0%, rgba(36, 36, 38, 0) 100%);
   }
   
   .logo{
-    /* position: absolute; */
     width: 40px;
     height: 40px;
   }
