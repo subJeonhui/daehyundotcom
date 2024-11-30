@@ -55,12 +55,12 @@ const calculatePrice = () => {
   
     if (requiredLuna > 0) {
       // 남은 루나가 있으면 최저 패키지 추가
-      const { luna, price } = priceTable[0];
-      totalCost += price;
+      const { luna, price, price2 } = priceTable[0];
+      totalCost += price2;
       counts.push({
         luna,
         count: 1,
-        totalPrice: price,
+        totalPrice: price2,
       });
     }
     
@@ -83,7 +83,7 @@ const calculatePrice = () => {
 
   if (requiredLuna > 0) {
     // 남은 루나가 있으면 최저 패키지 추가
-    const { luna, price } = priceTable[0];
+    const { luna, price, price2 } = priceTable[i];
     totalCost += price;
     counts.push({
       luna,
@@ -110,7 +110,7 @@ const calculatePrice = () => {
 
   if (requiredLuna > 0) {
     // 남은 루나가 있으면 최저 패키지 추가
-    const { luna, price } = priceTable[0];
+    const { luna, price, price2 } = priceTable[i];
     totalCost += price;
     counts.push({
       luna,
