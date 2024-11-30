@@ -3,6 +3,7 @@ import {Link, useLocation, useNavigate} from 'react-router-dom';
 import styles from './styles/Header.module.css';
 import HeaderItemLink from "./HeaderItemLink.jsx";
 import Container from "./base/Container.jsx";
+import Logo from '../assets/images/Logo.svg?react';
 
 function Header() {
     const {pathname} = useLocation();
@@ -20,11 +21,11 @@ function Header() {
 
     return (
         <div className={styles.menu}>
-            <div className={styles.header}>
-                <Link to="/" className={styles.notactive}>
-                    <img className={styles.logo} src="./image/logo.png" alt="LOGO"/>
+            <Container className={styles.header}>
+                <Link to="/">
+                    <Logo className={styles.logo}/>
                 </Link>
-            </div>
+            </Container>
             <Container direction={'row'} gap={20}>
                 {headerItem.map((item, index) => (
                     <HeaderItemLink path={path} {...item}/>
