@@ -134,7 +134,7 @@ const calculatePrice = () => {
           type="text"
           className={styles.input}
           value={nowExchange}
-          onChange={(e) => clickHermes(e.target.value)}
+          onChange={(e) => setNowExchange(e.target.value)}
         ></input>
       </div>
 
