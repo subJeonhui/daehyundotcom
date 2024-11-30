@@ -3,11 +3,11 @@ import styles from "./styles/Mail.module.css";
 
 function Mail() {
   const priceTable = [
-    { luna: 42, price: 999, price:1100 },
-    { luna: 142, price: 2990, price:3300 },
-    { luna: 420, price: 7900, price:8500 },
-    { luna: 1420, price: 24900, price:27000 },
-    { luna: 4242, price: 69000, price:75000 },
+    { luna: 42, price: 999, price2:1100 },
+    { luna: 142, price: 2990, price2:3300 },
+    { luna: 420, price: 7900, price2:8500 },
+    { luna: 1420, price: 24900, price2:27000 },
+    { luna: 4242, price: 69000, price2:75000 },
   ];
 
   // 상태 변수들
