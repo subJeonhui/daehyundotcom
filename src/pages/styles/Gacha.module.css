@@ -207,6 +207,7 @@ select {
 .gacha tbody tr {
   border-bottom: 1px solid #444;
   transition: background-color 0.2s;
+  height: 50px;
 }
 
 .gacha tbody tr:hover {
@@ -221,7 +222,7 @@ select {
 /* 열 너비 조정 */
 .gacha thead th:nth-child(1), .gacha thead tr td:nth-child(1),
 .gacha tbody td:nth-child(1) {
-  width: 20%; /* 선택 열 */
+  width: 15%; /* 선택 열 */
 }
 
 .gacha thead th:nth-child(2), .gacha thead tr td:nth-child(2) 
@@ -244,6 +245,10 @@ select {
   width: 100%;
 }
 
+.gacha tbody tr{
+  height: 50px;
+}
+
 .gacha tbody tr:nth-child(even) {
   background-color: #2a2a2a;
 }
@@ -251,6 +256,8 @@ select {
 .gacha tbody tr:nth-child(odd) {
   background-color: #1e1e1e;
 }
+
+
 
 .gacha tfoot td {
   border-top: 2px solid #aa0000;
