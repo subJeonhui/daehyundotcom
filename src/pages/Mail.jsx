@@ -83,13 +83,9 @@ const calculatePrice = () => {
   }
 }
 
-
-
   setPackageCounts(counts);
   setTotalPrice(totalCost);
 };
-
-
 
 
   // onClick 이벤트 핸들러
@@ -105,13 +101,6 @@ const calculatePrice = () => {
     }
   }, [ruble, nowExchange]); // ruble과 nowExchange 값이 변경될 때마다 calculatePrice 호출
 
-  // 초기화 함수
-  const onReset = () => {
-    setPrice(42);
-    setPrice2(1002);
-    setRuble(50 * (Number(price2) - Number(price)) * (Number(price) + Number(price2) - 74)); // 루블 초기화
-    setPackageCounts([]); // 패키지 갯수 초기화
-  };
 
   // 옵션 목록 생성
   const options = [];
@@ -137,7 +126,7 @@ const calculatePrice = () => {
           ))}
         </select>
       </div>
-
+      
       <div className={styles.inputflex}>
         <p>목표 우체통</p>
         <select

@@ -16,6 +16,7 @@ function Header() {
         {href: "/환율", title: "환율 계산기"},
         {href: "/권엽", title: "권엽 계산기"},
         {href: "/출석보상", title: "출석보상 계산기"},
+        {href: "/검닉랭킹", title: "검닉랭킹"},
         // {href: "/유저게시판", title: "유저게시판"}
     ]
 

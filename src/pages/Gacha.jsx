@@ -48,13 +48,34 @@ function Gacha() {
     useEffect(() => {
         const savedGrade = getCookie("selectedGrade");
         const savedCheckedItems = getCookie("checkedItems");
-        
+
+
+        // savedCheckedItems 에 있는 인덱스의 아이템들을 체크 상태로 설정
+
+
+
         if (savedGrade) {
             setSelectedGrade(savedGrade);
         }
+
         if (savedCheckedItems) {
-            setCheckedItems(new Set(savedCheckedItems.split(",")));
+            const savedCheckedItemsSet = new Set(savedCheckedItems.split(",").map(Number)); // 저장된 인덱스를 Set으로 변환
+
+            // 아이템들의 확률을 업데이트
+            setItems(prevItems => {
+                return prevItems.map((item, index) => {
+                    if (savedCheckedItemsSet.has(index)) {
+                        // 체크된 아이템은 확률을 0%로 설정
+                        return { ...item, chance: 0 };
+                    }
+                    return item;
+                });
+            });
+
+            // 체크된 아이템들 상태 업데이트
+            setCheckedItems(savedCheckedItemsSet);
         }
+        
     }, []);
 
     // equip 확률의 아이템들 확률 합산 (체크된 아이템 제외)
@@ -79,14 +100,16 @@ function Gacha() {
     };
 
     // 체크박스 상태 변경 핸들러
-    const handleCheckboxChange = (e, itemName) => {
+    const handleCheckboxChange = (e, index) => {
         const newCheckedItems = new Set(checkedItems);
         if (e.target.checked) {
-            newCheckedItems.add(itemName); // 아이템 체크됨
+            newCheckedItems.add(index); // 아이템 체크됨
         } else {
-            newCheckedItems.delete(itemName); // 아이템 체크 해제됨
+            newCheckedItems.delete(index); // 아이템 체크 해제됨
         }
         setCheckedItems(newCheckedItems);
+
+        // 쿠키에 인덱스 저장 (인덱스는 문자열로 저장)
         setCookie("checkedItems", Array.from(newCheckedItems).join(","), 7); // 7일 동안 유지되는 쿠키 저장
     };
 
@@ -126,9 +149,8 @@ function Gacha() {
                                         <input
                                             type="checkbox"
                                             name="gacha"
-                                            value={item.name}
-                                            checked={checkedItems.has(item.name)} // 체크 상태 설정
-                                            onChange={(e) => handleCheckboxChange(e, item.name)} // 체크박스 변경 시 처리
+                                            checked={checkedItems.has(index)} // 인덱스 기반 체크 상태 설정
+                                            onChange={(e) => handleCheckboxChange(e, index)} // 체크박스 변경 시 처리
                                         />
                                     )}
                                 </td>

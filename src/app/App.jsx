@@ -12,6 +12,7 @@ import Gacha from "../pages/Gacha.jsx";
 import DailyReward from "../pages/DailyReward.jsx";
 import Board from "../pages/Board.jsx";
 import BoardDetail from "../pages/BoardDetail.jsx";
+import ColorRank from "../pages/ColorRank.jsx";
 import Header from "../components/Header.jsx";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/권엽"  element={<Discipline />} />
                 <Route path="/상자깡"  element={<Gacha />} />
                 <Route path="/출석보상"  element={<DailyReward />} />
+                <Route path="/검닉랭킹"  element={<ColorRank />} />
                 <Route path="/유저게시판"  element={<Board />} />
                 <Route path="/유저게시판/:id" element={<BoardDetail />} />
             </Routes>
