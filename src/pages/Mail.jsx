@@ -104,7 +104,7 @@ const calculatePrice = () => {
 
   // 옵션 목록 생성
   const options = [];
-  for (let i = 42; i <= 4242; i += 10) {
+  for (let i = 42; i <= 10002; i += 10) {
     options.push(i);
   }
 
