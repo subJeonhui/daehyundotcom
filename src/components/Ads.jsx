@@ -14,7 +14,6 @@ function Ads() {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                // ad는 리스트 형태로 저장되어 있음
                 setAds(data.ad);
             });
 

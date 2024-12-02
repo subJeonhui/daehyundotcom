@@ -130,7 +130,7 @@ function Gacha() {
             </select>
 
             <h2>장착템 확률 합계: {totalEquipProbability.toFixed(4)}%</h2>
-            <h3>전체확률 : {total}</h3>
+            {/* <h3>전체확률 : {total}</h3> */}
             <div className={styles.gachaContainer}>
                 <table className={styles.gacha}>
                     <thead>
