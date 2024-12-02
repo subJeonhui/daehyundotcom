@@ -16,12 +16,12 @@ function Discipline() {
                 ></input>
             </div>
             
-            <div className={styles.result}></div>
-            <div className={styles.resultarea}>
-                <p>권엽 차감 명성</p>
-                <p>{Math.round(20 + Math.sqrt(amount) * 1.2)}</p>                
+            <div className={styles.result}>
+                <div className={styles.resultarea}>
+                    <p>권엽 차감 명성</p>
+                    <p>{Math.round(20 + Math.sqrt(amount) * 1.2)}</p>                
+                </div>
             </div>
-
         </div>
     )
 }

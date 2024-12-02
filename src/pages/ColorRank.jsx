@@ -4,13 +4,16 @@ import styles from "./styles/ColorRank.module.css";
 function ColorRank() {
     // Loading 상태 변수 추가
     const [loading, setLoading] = useState(true);
-
+    
     // API 호출을 통해 데이터를 가져오는 함수
     const fetchData = async () => {
         try {
             const response = await fetch("https://hufsnc.com/api/datas");
             const data = await response.json();
 
+            const response2 = await fetch("https://hufsnc.com/api/time");
+            const data2 = await response2.text();
+            setTime(data2);
             // data에 랭킹을 컬럼추가
             data.forEach((item, index) => {
                 item.rank = index + 1;
@@ -28,6 +31,7 @@ function ColorRank() {
     const [items, setItems] = useState([]);
     const [serchItems, setSearchItems] = useState('');
 
+    const [time, setTime] = useState('');
     // 컴포넌트가 처음 렌더링될 때 데이터를 불러오는 effect
     useEffect(() => {
         fetchData();
@@ -47,17 +51,7 @@ function ColorRank() {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>검닉 랭킹</h1>
-            <h2>최후의 반론서 댓글을 달면, 랭킹에 자동으로 추가됩니다.</h2>
-            
-            <div className={styles.lastAtag}>
-            <a href="https://mafia42.com/#/community/lastDiscussion/lastShow/1007550">https://mafia42.com/#/community/lastDiscussion/lastShow/1007550</a>
-            </div>
-            <img
-                       src={`../image/comment.PNG`}
-                       alt="comment"
-                       style={{ width: "50%", height: "auto" }}
-            />
-            
+          
             <div className={styles.inputflex}>
                 <input
                     type="text"
@@ -103,6 +97,18 @@ function ColorRank() {
                     </table>
                 </div>
             )}
+                            <div>
+                    <h2>최후의 반론서 댓글을 달면, 랭킹에 자동으로 추가됩니다.</h2>
+                    <h3>최근 갱신일 {time}</h3>
+                    <div className={styles.lastAtag}>
+                    <a style={{color:"red"}} href="https://mafia42.com/#/community/lastDiscussion/lastShow/1007550">최후의 반론 링크</a>
+                    </div>
+                    <img
+                            src={`../image/comment.PNG`}
+                            alt="comment"
+                            style={{ width: "100%", height: "auto", margin: "0 0 10px 0" }}
+                    />
+                </div>
         </div>
     );
 }

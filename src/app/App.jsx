@@ -13,6 +13,7 @@ import DailyReward from "../pages/DailyReward.jsx";
 import Board from "../pages/Board.jsx";
 import BoardDetail from "../pages/BoardDetail.jsx";
 import ColorRank from "../pages/ColorRank.jsx";
+import LimitCheck from "../pages/LimitCheck.jsx";
 import Header from "../components/Header.jsx";
 
 function App() {
@@ -26,13 +27,16 @@ function App() {
             {showHeader &&  <Header setSelectedMenu={setSelectedMenu} />} {/* /main 경로에서는 Header를 렌더링하지 않음 */}
             <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/상자깡"  element={<Gacha />} />
+                <Route path="/검닉랭킹"  element={<ColorRank />} />
+                <Route path="/획초체크"  element={<LimitCheck />} />
                 <Route path="/티어"  element={<Tier />} />
                 <Route path="/우체통" element={<Mail />} />
                 <Route path="/환율" element={<Exchange />} />
                 <Route path="/권엽"  element={<Discipline />} />
-                <Route path="/상자깡"  element={<Gacha />} />
+           
                 <Route path="/출석보상"  element={<DailyReward />} />
-                <Route path="/검닉랭킹"  element={<ColorRank />} />
+         
                 <Route path="/유저게시판"  element={<Board />} />
                 <Route path="/유저게시판/:id" element={<BoardDetail />} />
             </Routes>

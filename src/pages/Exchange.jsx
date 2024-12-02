@@ -43,7 +43,7 @@ function Exchange() {
                     ></input>
                 </div>
 
-                <div className={styles.result}></div>
+                <div className={styles.result}>
 
                 <div className={styles.resultarea}>
                 <p>
@@ -57,6 +57,7 @@ function Exchange() {
                     {type === "runa" ? "루블" : "루나"}
                 </p>
 
+                </div>
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/Discipline.module.css";
+import styles from "./styles/DailyReward.module.css";
 
 function DailyReward() {
     const [amount, setAmount] = React.useState(0);

@@ -159,8 +159,11 @@ flex-grow: 0;
 
 .result{
   border-top: 2px solid #91282C;
+  border-bottom: 2px solid #91282C;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 
 .resultarea {
   background-color: #3A3A3C;

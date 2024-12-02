@@ -155,7 +155,6 @@ function Tier(){
         </div>
 
         <div className={styles.result}>
-        </div>
 
             <div className={styles.resultarea}>
                 <div>
@@ -200,6 +199,8 @@ function Tier(){
                     </>
                 )}
                 </div>
+            </div>
+
             </div>
 
 
