@@ -32,10 +32,11 @@
   }
 }
 
-a{
+.alink{
     text-Align:center; 
     color:rgb(209, 159, 159);
     font-weight: bold;
     display:flex;
     justify-Content:center;
+    background-color: #1e1e1e;
 }

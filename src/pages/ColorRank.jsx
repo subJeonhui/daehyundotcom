@@ -98,7 +98,7 @@ function ColorRank() {
                 </div>
             )}
                             <div>
-                    <h2>최후의 반론서 댓글을 달면, 랭킹에 자동으로 추가됩니다.</h2>
+                    <h2>최후의 반론에서 댓글을 달면, 랭킹에 자동으로 추가됩니다.</h2>
                     <h3>최근 갱신일 {time}</h3>
                     <div className={styles.lastAtag}>
                     <a style={{color:"red"}} href="https://mafia42.com/#/community/lastDiscussion/lastShow/1007550">최후의 반론 링크</a>

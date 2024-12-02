@@ -50,7 +50,7 @@ function Ads() {
       {/* <div className={styles.adContainer}>
         <div className={styles.ad}>{ads2[currentIndex2]}</div>
       </div> */}
-        <a href="https://open.kakao.com/o/sWIax8Vc">대현닷컴 홍보문의 링크</a>
+        <a className={styles.alink} href="https://open.kakao.com/o/sWIax8Vc">대현닷컴 홍보문의 링크</a>
 
     </>
   );
