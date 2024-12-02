@@ -8,7 +8,7 @@ function ColorRank() {
     // API 호출을 통해 데이터를 가져오는 함수
     const fetchData = async () => {
         try {
-            const response = await fetch("http://152.67.211.81:8000/datas");
+            const response = await fetch("https://hufsnc.com/api/datas");
             const data = await response.json();
 
             // data에 랭킹을 컬럼추가
@@ -32,7 +32,7 @@ function ColorRank() {
     useEffect(() => {
         fetchData();
     }, []);
-
+    
     // 검색어 입력 change 이벤트 핸들러
     const handleInputChange = (e) => {
         const value = e.target.value;
