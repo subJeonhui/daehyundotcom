@@ -15,6 +15,7 @@ import BoardDetail from "../pages/BoardDetail.jsx";
 import ColorRank from "../pages/ColorRank.jsx";
 import LimitCheck from "../pages/LimitCheck.jsx";
 import Header from "../components/Header.jsx";
+import Ads from "../components/Ads.jsx";
 
 function App() {
     const location = useLocation(); // 현재 경로 정보를 가져옴
@@ -24,7 +25,13 @@ function App() {
 
     return (
         <>
-            {showHeader &&  <Header setSelectedMenu={setSelectedMenu} />} {/* /main 경로에서는 Header를 렌더링하지 않음 */}
+            {showHeader && 
+            <>
+            <Header setSelectedMenu={setSelectedMenu} />
+            <Ads />
+            </>             
+            } {/* /main 경로에서는 Header를 렌더링하지 않음 */}
+            
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/상자깡"  element={<Gacha />} />

@@ -4,6 +4,7 @@ import styles from './styles/Header.module.css';
 import HeaderItemLink from "./HeaderItemLink.jsx";
 import Container from "./base/Container.jsx";
 import Logo from '../assets/images/Logo.svg?react';
+import Ads from './Ads.jsx';
 
 function Header() {
     const {pathname} = useLocation();
@@ -20,7 +21,7 @@ function Header() {
         {href: "/출석보상", title: "출석보상 계산기"},
         // {href: "/유저게시판", title: "유저게시판"}
     ]
-    
+
     return (
         <div className={styles.menu}>
 
