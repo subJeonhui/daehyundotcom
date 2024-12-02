@@ -162,6 +162,19 @@ select {
   flex-grow: 0;
 }
 
+
+.lastAtag{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  /* a태그 색 */
+  color: #EAEAEA;
+  text-decoration: none;
+  
+
+}
+
 .colorblock{
   display : block;
   width: 20px;

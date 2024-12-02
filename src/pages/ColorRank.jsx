@@ -32,7 +32,7 @@ function ColorRank() {
     useEffect(() => {
         fetchData();
     }, []);
-    
+
     // 검색어 입력 change 이벤트 핸들러
     const handleInputChange = (e) => {
         const value = e.target.value;
@@ -47,6 +47,17 @@ function ColorRank() {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>검닉 랭킹</h1>
+            <h2>최후의 반론서 댓글을 달면, 랭킹에 자동으로 추가됩니다.</h2>
+            
+            <div className={styles.lastAtag}>
+            <a href="https://mafia42.com/#/community/lastDiscussion/lastShow/1007550">https://mafia42.com/#/community/lastDiscussion/lastShow/1007550</a>
+            </div>
+            <img
+                       src={`../image/comment.PNG`}
+                       alt="comment"
+                       style={{ width: "50%", height: "auto" }}
+            />
+            
             <div className={styles.inputflex}>
                 <input
                     type="text"
