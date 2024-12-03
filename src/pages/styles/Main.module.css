@@ -31,7 +31,6 @@
 .container {
     font-family: 'Pretendard';
     font-style: normal;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
