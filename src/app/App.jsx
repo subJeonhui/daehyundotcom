@@ -25,6 +25,7 @@ function App() {
 
     return (
         <>
+         <Analytics /> {/* Vercel Analytics 추가 */}
             {showHeader && 
             <>
             <Header setSelectedMenu={setSelectedMenu} />
@@ -48,7 +49,6 @@ function App() {
                 <Route path="/유저게시판/:id" element={<BoardDetail />} />
             </Routes>
             <Footer />
-            <Analytics />
             <></>
         </>
     );

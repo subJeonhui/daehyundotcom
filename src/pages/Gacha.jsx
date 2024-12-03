@@ -167,13 +167,11 @@ function Gacha() {
                                 <td>
                                     {item.name}
                                 </td>
-                                <td>                                   
+                                <td>
                                     {checkedItems.has(index) ? "0%" : `${
                                         (item.chance+(add)).toFixed(2)
                                     }%`}
-
-
-                                    </td>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
