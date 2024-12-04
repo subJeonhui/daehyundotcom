@@ -110,7 +110,7 @@ function Gacha() {
             <h1>장착템 확률 : {totalEquipProbability.toFixed(4)}% </h1>
 
             <select
-                className={styles.selectbox}
+                className={styles.select + ' ' + styles.selectbox}
                 value={selectedGrade}
                 onChange={handleGradeChange}
             >

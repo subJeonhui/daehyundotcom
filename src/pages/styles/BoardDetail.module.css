@@ -15,7 +15,7 @@
     padding-left: 10px;
 }
 
-select {
+.select {
   box-sizing: border-box;
   /* Auto layout */
   display: flex;
@@ -88,7 +88,7 @@ margin-bottom: 20px;
   margin-bottom: 20px;
 }
 
-input{
+.input{
 
 width: 150px;
 box-sizing: border-box;

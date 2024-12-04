@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles/ColorRank.module.css";
+import CategoryTitle from "../components/CategoryTitle.jsx";
 
 function ColorRank() {
     // Loading 상태 변수 추가
@@ -50,7 +51,7 @@ function ColorRank() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>검닉 랭킹</h1>
+            <CategoryTitle title="검닉랭킹" />
           
             <div className={styles.inputflex}>
                 <input

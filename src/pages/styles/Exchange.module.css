@@ -2,7 +2,7 @@
   margin : 5vw;
   width: 90vw;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  
+
   color: #EAEAEA;
 
 
@@ -18,7 +18,7 @@
 
 }
 
-select {
+.select {
   box-sizing: border-box;
 
   /* Auto layout */
@@ -92,7 +92,7 @@ margin-bottom: 20px;
   margin-bottom: 20px;
 }
 
-input{
+.input{
 
 width: 150px;
 box-sizing: border-box;
@@ -179,7 +179,7 @@ flex-grow: 0;
   padding-left : 20px;
   width: 90% ; /* 가로 100% */
   height: auto; /* 최소 높이를 설정하여 높이가 깨지지 않도록 */
-  
+
   background: #3A3A3C;
   border-radius: 8px;
 

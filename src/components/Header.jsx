@@ -24,13 +24,13 @@ function Header() {
 
     return (
         <Container className={styles.header}>
-            <Container className={styles.menu}>
+            <Container className={styles.menu} fullWidth alignLeft>
                 <Link to="/">
                     <Logo className={styles.logo}/>
                 </Link>
             </Container>
             <Container fullWidth className={styles.menubar}>
-                <Container direction={'row'} gap={20}>
+                <Container fullWidth alignTop alignLeft direction={'row'} gap={20}>
                     {headerItem.map((item, index) => (
                         <HeaderItemLink key={index} path={path} {...item}/>
                     ))}

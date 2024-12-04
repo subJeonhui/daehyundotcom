@@ -15,7 +15,7 @@
     padding-left: 10px;
 }
 
-select {
+.select {
   box-sizing: border-box;
 
   /* Auto layout */

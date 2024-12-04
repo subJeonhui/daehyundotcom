@@ -19,7 +19,7 @@ function Exchange() {
                 <p className={styles.title}>환율 계산기</p>
 
                 <select
-                    className={styles.selectbox}
+                    className={styles.select + ' ' + styles.selectbox}
                     id="currency1"
                     value={type}
                     onChange={handleChange}
